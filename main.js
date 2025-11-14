@@ -2,6 +2,7 @@ const menu = document.querySelector(".fa-bars");
 const clos = document.querySelector(".fa-xmark");
 const sidebar = document.querySelector(".sidebar");
 const overlay = document.querySelector(".overlay");
+const li = document.querySelectorAll("ul li")
 const bgdiv = document.querySelector(".bgdiv");
 
 // document.addEventListener("DOMContentLoaded" , function(){
@@ -29,6 +30,14 @@ clos.addEventListener('click' , ()=>{
     overlay.classList.add("hidden")
 
 })
+
+for(i=0 ; i< li.length ; i++){
+    li[i].addEventListener('click' , ()=>{
+     sidebar.classList.add("hidden")
+    overlay.classList.add("hidden")
+
+}
+)}
 
 window.addEventListener("scroll" , ()=>{
     let scrollY = window.scrollY
